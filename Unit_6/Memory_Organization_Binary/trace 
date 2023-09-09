@@ -1,0 +1,43 @@
+Hello world!
+
+adresse `str`: 0x7ffceb93ee08
+contenu `str`: 0x55a57b9a60be
+
+adresse `alloc`: 0x7ffceb93ee00
+contenu `alloc`: 0x55a57c88c6b0
+
+adresse `main()`: 0x55a57b9a5225
+adresse `dump_memory_map()`: 0x55a57b9a5199
+
+address                   perms offset  dev   inode                      pathname
+-------                   ----- ------  ---   -----                      --------
+55a57b9a4000-55a57b9a5000 r--p 00000000 00:33 77879657                   /users/info/etu-2a/kersuaar/Documents/R3.16/Unit_6/instrumented-program
+55a57b9a5000-55a57b9a6000 r-xp 00001000 00:33 77879657                   /users/info/etu-2a/kersuaar/Documents/R3.16/Unit_6/instrumented-program
+55a57b9a6000-55a57b9a7000 r--p 00002000 00:33 77879657                   /users/info/etu-2a/kersuaar/Documents/R3.16/Unit_6/instrumented-program
+55a57b9a7000-55a57b9a8000 r--p 00002000 00:33 77879657                   /users/info/etu-2a/kersuaar/Documents/R3.16/Unit_6/instrumented-program
+55a57b9a8000-55a57b9a9000 rw-p 00003000 00:33 77879657                   /users/info/etu-2a/kersuaar/Documents/R3.16/Unit_6/instrumented-program
+55a57c88c000-55a57c8ad000 rw-p 00000000 00:00 0                          [heap]
+7f8d9b434000-7f8d9b437000 rw-p 00000000 00:00 0 
+7f8d9b437000-7f8d9b45d000 r--p 00000000 103:01 10893824                  /usr/lib/x86_64-linux-gnu/libc.so.6
+7f8d9b45d000-7f8d9b5b2000 r-xp 00026000 103:01 10893824                  /usr/lib/x86_64-linux-gnu/libc.so.6
+7f8d9b5b2000-7f8d9b605000 r--p 0017b000 103:01 10893824                  /usr/lib/x86_64-linux-gnu/libc.so.6
+7f8d9b605000-7f8d9b609000 r--p 001ce000 103:01 10893824                  /usr/lib/x86_64-linux-gnu/libc.so.6
+7f8d9b609000-7f8d9b60b000 rw-p 001d2000 103:01 10893824                  /usr/lib/x86_64-linux-gnu/libc.so.6
+7f8d9b60b000-7f8d9b618000 rw-p 00000000 00:00 0 
+7f8d9b655000-7f8d9b657000 rw-p 00000000 00:00 0 
+7f8d9b657000-7f8d9b658000 r--p 00000000 103:01 10893116                  /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+7f8d9b658000-7f8d9b67d000 r-xp 00001000 103:01 10893116                  /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+7f8d9b67d000-7f8d9b687000 r--p 00026000 103:01 10893116                  /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+7f8d9b687000-7f8d9b689000 r--p 00030000 103:01 10893116                  /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+7f8d9b689000-7f8d9b68b000 rw-p 00032000 103:01 10893116                  /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+7ffceb920000-7ffceb942000 rw-p 00000000 00:00 0                          [stack]
+7ffceb95b000-7ffceb95f000 r--p 00000000 00:00 0                          [vvar]
+7ffceb95f000-7ffceb961000 r-xp 00000000 00:00 0                          [vdso]
+
+
+
+
+ TOTAL 2420     636      12    3068     bfc instrumented-program
+
+2420     632       8    3060     bf4 instrumented-program
+ 2420     636      12    3068     bfc instrumented-program
