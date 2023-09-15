@@ -81,6 +81,21 @@ void pascal_display(int profondeur, int **triangle)
 
 }
 
+void pascal_display_binome(int profondeur, int **triangle)
+{
+    for (int i = 0; i <= profondeur; i++){
+
+        for (int j = 0; j <= i; j++)
+        {
+          //n−1 : coeff [ n , i ] = coeff [ n − 1 , i − 1 ] + coeff [ n − 1 , i ] . 
+        printf("(a + b)^%d = ", profondeur);
+        }
+
+    }
+    
+ 
+}
+
 
 int main(int argc,char *argv[])
 {   
