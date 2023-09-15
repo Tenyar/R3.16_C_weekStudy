@@ -78,24 +78,43 @@ void pascal_display(int profondeur, int **triangle)
 
     printf("\n");
     }
-
 }
 
 void pascal_display_binome(int profondeur, int **triangle)
 {
-    for (int i = 0; i <= profondeur; i++){
+    // a^[profondeur] + 5.a^[profondeur-1].b^1 + 10.a^[profondeur-2].b^2 + 10.a^[profondeur - 3].b^3 + 5.a^[profondeur - 4].b^4 + b^5
+    int puissance_a;
+    int puissance_b;
+    puissance_a = profondeur;
+    puissance_b = 0;
 
-        for (int j = 0; j <= i; j++)
-        {
-          //n−1 : coeff [ n , i ] = coeff [ n − 1 , i − 1 ] + coeff [ n − 1 , i ] . 
-        printf("(a + b)^%d = ", profondeur);
-        }
+    printf("(a + b)^%d = ", profondeur);
 
+    if (profondeur == 0)
+    {
+        printf(" a^0 + b^0 \n");
     }
     
- 
-}
 
+    for (int i = 0; i <= profondeur; i++)
+    {
+        if (puissance_a == 0 && i != 0)
+        {
+            printf(" b^%d", puissance_b);
+        }
+        else if(puissance_b == 0)
+        {
+            printf(" a^%d +", puissance_a);
+        }
+        else
+        {
+            //on print la dernière ligne du pascal pour le dévoloppement du binôme.
+            printf(" %d.a^%d.b^%d +", triangle[profondeur][i], puissance_a, puissance_b);
+        }
+        puissance_a --;
+        puissance_b ++;
+    }
+}
 
 int main(int argc,char *argv[])
 {   
@@ -119,7 +138,9 @@ int main(int argc,char *argv[])
     
     pascal_fill(profondeur, tab_ptr_1);
     pascal_display(profondeur, tab_ptr_1);
+    pascal_display_binome(profondeur, tab_ptr_1);
     pascal_free(profondeur, tab_ptr_1);
 
 	return EXIT_SUCCESS;
 }
+//  COMMAND COMPILE POWER-SHELL : gcc -std=c99 -Wall -Wextra -g -o pascal pascal.c
